@@ -5,7 +5,7 @@ tag=$(echo $json | jq -r '.tag_name')
 tar_url=$(echo $json | jq -r '.tarball_url')
 tag=$(echo $json | jq -r '.tag_name')
 version=${tag:1}
-sha256=$(curl $tar_url 2>/dev/null| sha256sum)
+sha256=$(curl -L $tar_url 2>/dev/null| sha256sum)
 
 sed -i "s!url\ \".*\"!url\ \"${tar_url}\"!g" oidc-agent.rb
 sed -i "s/version\ \".*\"/version\ \"${version}\"/g" oidc-agent.rb
