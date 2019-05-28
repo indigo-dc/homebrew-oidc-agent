@@ -6,7 +6,7 @@ class OidcAgent < Formula
   homepage "https://github.com/indigo-dc/oidc-agent/"
   url "https://api.github.com/repos/indigo-dc/oidc-agent/tarball/v3.1.0"
   version "3.1.0"
-  sha256 "6c5e89f7690e95686c7fd3ddb5fc5fd4673ae274f7367e8b063a5ef3748c450d"
+  sha256 "46383e68f12bacc877ea23ecc5c7dbf986b85603897bdd78174f977cfc532867"
 
   depends_on "pkg-config"
   depends_on "argp-standalone"
