@@ -4,9 +4,9 @@
 class OidcAgent < Formula
   desc "oidc-agent is a set of tools to manage OpenID Connect tokens and make them easily usable from the command line. We followed the ssh-agent design, so users can handle OIDC tokens in a similiar way as they do with ssh keys."
   homepage "https://github.com/indigo-dc/oidc-agent/"
-  url "https://api.github.com/repos/indigo-dc/oidc-agent/tarball/v3.3.4"
-  version "3.3.4"
-  sha256 "a74e6ed2811232ab1c21993c2389e8646989683140f98ea1f87c6460399b26ca"
+  url "https://api.github.com/repos/indigo-dc/oidc-agent/tarball/v3.3.5"
+  version "3.3.5"
+  sha256 "baf01c4bf80c6097e552eebf9d0c89a918a876fabe52ea4733c07f4fa747f88a"
 
   depends_on "pkg-config"
   depends_on "argp-standalone"
