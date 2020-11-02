@@ -7,13 +7,15 @@ class OidcAgent < Formula
   url "https://api.github.com/repos/indigo-dc/oidc-agent/tarball/v3.3.5"
   version "3.3.5"
   sha256 "baf01c4bf80c6097e552eebf9d0c89a918a876fabe52ea4733c07f4fa747f88a"
+  license "MIT"
 
   depends_on "pkg-config"
   depends_on "argp-standalone"
   depends_on "libsodium"
   depends_on "libmicrohttpd"
   depends_on "help2man"
-  depends_on "zachmann/x11-ssh-askpass/x11-ssh-askpass" => :recommended
+  # We also depend (recommend) on pashua which is installable as cask. We
+  # currently cannot depend on casks. It's included in the docu.
 
   def install
     system "make -j1"
