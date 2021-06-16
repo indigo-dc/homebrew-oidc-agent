@@ -4,9 +4,9 @@
 class OidcAgent < Formula
   desc "oidc-agent is a set of tools to manage OpenID Connect tokens and make them easily usable from the command line. We followed the ssh-agent design, so users can handle OIDC tokens in a similiar way as they do with ssh keys."
   homepage "https://github.com/indigo-dc/oidc-agent/"
-  url "https://api.github.com/repos/indigo-dc/oidc-agent/tarball/v4.0.2"
-  version "4.0.2"
-  sha256 "1bbe267269bdefb0832c6f29402c57af0b9a586dcf2496cc82213deb49199888"
+  url "https://api.github.com/repos/indigo-dc/oidc-agent/tarball/v4.1.0"
+  version "4.1.0"
+  sha256 "105b473f2fafef9921b4713d4caa29415c9d5563e5859936a04f22a1d20c082c"
   license "MIT"
 
   depends_on "pkg-config"
@@ -14,6 +14,7 @@ class OidcAgent < Formula
   depends_on "libsodium"
   depends_on "libmicrohttpd"
   depends_on "help2man"
+  depends_on "jq"
   # We also depend (recommend) on pashua which is installable as cask. We
   # currently cannot depend on casks. It's included in the docu.
 
