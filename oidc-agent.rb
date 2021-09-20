@@ -4,9 +4,9 @@
 class OidcAgent < Formula
   desc "oidc-agent is a set of tools to manage OpenID Connect tokens and make them easily usable from the command line. We followed the ssh-agent design, so users can handle OIDC tokens in a similiar way as they do with ssh keys."
   homepage "https://github.com/indigo-dc/oidc-agent/"
-  url "https://github.com/indigo-dc/oidc-agent/archive/refs/tags/v4.1.1-mac.tar.gz"
-  version "4.1.1-2"
-  sha256 "11615d3d0e0e5d415de1b8ef32f85b68a73d8ac547113c4f081df8445855e51f"
+  url "https://api.github.com/repos/indigo-dc/oidc-agent/tarball/v4.2.0"
+  version "4.2.0"
+  sha256 "60f98fc07a4821900e0bf86d93741f1b411f8b5c1b2555f033e31005295a2e1e"
   license "MIT"
 
   depends_on "pkg-config"
@@ -15,11 +15,12 @@ class OidcAgent < Formula
   depends_on "libmicrohttpd"
   depends_on "help2man"
   depends_on "jq"
+  depends_on "qrencode"
   # We also depend (recommend) on pashua which is installable as cask. We
   # currently cannot depend on casks. It's included in the docu.
 
   def install
-    system "make -j1"
+    system "make"
     system "make install PREFIX=#{prefix}"
   end
 
