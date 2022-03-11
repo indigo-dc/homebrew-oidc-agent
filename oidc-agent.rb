@@ -20,7 +20,7 @@ class OidcAgent < Formula
   # currently cannot depend on casks. It's included in the docu.
 
   def install
-    system "make"
+    system "make PREFIX=#{prefix}"
     system "make install PREFIX=#{prefix}"
   end
 
