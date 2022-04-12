@@ -3,7 +3,7 @@ class OidcAgent < Formula
   homepage "https://github.com/indigo-dc/oidc-agent/"
   url "https://github.com/indigo-dc/oidc-agent/archive/refs/heads/dev_4.3.0.tar.gz"
   version "4.3.0"
-  sha256 "1a3624ca38f0814a984c5ad025a0b12ca2e9c6663236b69d6272f39144d4d86e"
+  sha256 "3d8abd399be3b54871582ef543695c81327a4d01b6628d10d63dd11d815858ee"
   license "MIT"
 
   depends_on "help2man" => :build
