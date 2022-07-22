@@ -6,9 +6,9 @@ class OidcAgent < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/indigo-dc/homebrew-oidc-agent/releases/download/oidc-agent-4.3.1"
-    sha256 cellar: :any, big_sur:  "7fa3636d60776ec1db5c31fa18977f813ef0cc3b703722d8a3c6474ad60ea2cd"
-    sha256 cellar: :any, catalina: "c8236cf49f425619f0e0068812207d9ebf0a048e7d7cdf9de381dc15a6ce88bc"
+    root_url "https://github.com/indigo-dc/homebrew-oidc-agent/releases/download/oidc-agent-4.3.2"
+    sha256 big_sur:  "1bf5dd8d424d183e555a054f5acb506f03670bd8c7fb69a692b3e9a4dd4379a9"
+    sha256 catalina: "6bb3d8183c59ca4263f8818349da548987116906661d78635b8c088deef5a6f2"
   end
 
   depends_on "help2man" => :build
