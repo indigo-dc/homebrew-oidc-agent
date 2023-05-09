@@ -3,7 +3,7 @@ class OidcAgent < Formula
   homepage "https://github.com/indigo-dc/oidc-agent"
   url "https://github.com/indigo-dc/oidc-agent/archive/refs/heads/prerel.tar.gz"
   version "4.5.2"
-  sha256 "b3b48ecfd0366b7ff1745ed071a05ac0d68f1dc100ef720961571f71653b560d"
+  sha256 "92b86508e4403cd8999d0cca4133941b1823a8de8187d28c7caef725d6b83000"
   license "MIT"
 
   bottle do
