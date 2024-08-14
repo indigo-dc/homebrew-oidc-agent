@@ -25,7 +25,25 @@ class OidcAgent < Formula
     system "make", "install", "PREFIX=#{prefix}"
   end
 
+  service do
+    run [opt_bin/"oidc-agent", "-a", "~/Library/Caches/oidc-agent/oidc-agent.sock", "-d"]
+    keep_alive true
+    working_dir var
+    log_path var/"log/oidc-agent.log"
+    error_log_path var/"log/oidc-agent.log"
+    environment_variables PATH: "/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/homebrew/bin"
+  end
+
+  def caveats
+    <<~EOS
+      To start oidc-agent as a background service now and restart at login:
+        brew services start oidc-agent
+      If you don't need a background service, you can run the following instead:
+        oidc-agent -a ~/Library/Caches/oidc-agent/oidc-agent.sock -d
+    EOS
+  end
+
   test do
-    system "true"
+    assert_match version.to_s, shell_output("#{bin}/oidc-agent --version")
   end
 end
