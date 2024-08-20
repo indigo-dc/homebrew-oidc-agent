@@ -1,9 +1,11 @@
 #!/bin/bash
 
+set -e 
+
 token=$(git config --global github.token)
 
 json=$(http https://api.github.com/repos/indigo-dc/oidc-agent/releases/latest "Authorization: Bearer ${token}")
-tag=$(echo $json | jq -r '.tag_name')
+tag=$(echo "${json}" | jq -r '.tag_name')
 version=${tag/#v/}
 
-$(dirname $0)/updateToRelease.sh $version $1
+"$(dirname "$0")"/updateToRelease.sh "${version}" "$1"
