@@ -11,7 +11,7 @@ formula=$2
 
 git checkout -b "${version}"
 
-tar_url=$(echo "https://github.com/indigo-dc/oidc-agent/archive/refs/tags/VTAG.tar.gz" | sed \"s/VTAG/"${tag}"/g\")
+tar_url=$(echo "https://github.com/indigo-dc/oidc-agent/archive/refs/tags/VTAG.tar.gz" | sed s/VTAG/"${tag}"/g)
 wget "${tar_url}" -O /tmp/prerel.tar.gz -q
 sha256_output=$(sha256sum /tmp/prerel.tar.gz)
 sha256=$(printf "%s" "${sha256_output}" | awk '{print $1}')
