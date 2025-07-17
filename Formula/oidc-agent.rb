@@ -1,8 +1,8 @@
 class OidcAgent < Formula
   desc "Manage OpenID Connect tokens on the command-line"
   homepage "https://github.com/indigo-dc/oidc-agent"
-  url "https://github.com/indigo-dc/oidc-agent/archive/refs/tags/v5.3.0.tar.gz"
-  sha256 "7c69adc11c3329ae43f600e17872f1e1e7e8ddc2dac818f5fa9666f840c96144"
+  url "https://github.com/indigo-dc/oidc-agent/archive/refs/tags/v5.3.1.tar.gz"
+  sha256 "2837937fdf6d80e3aa91fa45a9c9dc25fb7ef516cf4f3690970892425f34091b"
   license "MIT"
 
   bottle do
